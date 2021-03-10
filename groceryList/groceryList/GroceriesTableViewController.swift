@@ -10,6 +10,7 @@ import UIKit
 class GroceriesTableViewController: UITableViewController {
 
     var groceries = ["apples", "bananas", "broccoli"]
+    @IBOutlet var addItemTextField : UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,10 @@ class GroceriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Section \(section)"
+    }
+    
+    @IBAction func addItem(sender: UIButton){
+        groceries.append(addItemTextField.text!)
     }
     
 

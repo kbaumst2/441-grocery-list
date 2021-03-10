@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		443739D825F86F8B00CD8A88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443739D725F86F8B00CD8A88 /* ViewController.swift */; };
 		447BD00A25F669B900AF55B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BD00925F669B900AF55B1 /* AppDelegate.swift */; };
 		447BD00C25F669B900AF55B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BD00B25F669B900AF55B1 /* SceneDelegate.swift */; };
 		447BD01125F669B900AF55B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447BD00F25F669B900AF55B1 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		443739D725F86F8B00CD8A88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		447BD00625F669B900AF55B1 /* groceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = groceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		447BD00925F669B900AF55B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		447BD00B25F669B900AF55B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				447BD00925F669B900AF55B1 /* AppDelegate.swift */,
 				447BD00B25F669B900AF55B1 /* SceneDelegate.swift */,
 				447BD00F25F669B900AF55B1 /* Main.storyboard */,
+				443739D725F86F8B00CD8A88 /* ViewController.swift */,
 				447BD03F25F678E300AF55B1 /* GroceriesTableViewController.swift */,
 				447BD01225F669BC00AF55B1 /* Assets.xcassets */,
 				447BD01425F669BC00AF55B1 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				447BD00A25F669B900AF55B1 /* AppDelegate.swift in Sources */,
 				447BD00C25F669B900AF55B1 /* SceneDelegate.swift in Sources */,
+				443739D825F86F8B00CD8A88 /* ViewController.swift in Sources */,
 				447BD04025F678E300AF55B1 /* GroceriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
