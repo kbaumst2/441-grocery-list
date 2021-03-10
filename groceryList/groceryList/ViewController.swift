@@ -11,9 +11,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var addItemTextField : UITextField!
-    @IBOutlet var addItemButton : UIButton!
+    @IBOutlet var addProduceButton : UIButton!
+    @IBOutlet var addMeatButton : UIButton!
+    @IBOutlet var addOtherButton : UIButton!
+
 
     var groceries = ["apples", "bananas", "broccoli", "Cheese"]
+    var produce = ["kale", "stawberry"]
+    var meat = ["chicken", "beef"]
+    var other = ["chips", "cheese"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,40 +33,96 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groceries.count
+        //return groceries.count
+        if(section == 0){
+            return produce.count
+        }
+        if(section == 1){
+            return meat.count
+        }
+        else{
+            return other.count
+        }
     }
-
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groceryCell", for: indexPath)
-
-        let groceryItem = groceries[indexPath.row]
-        cell.textLabel?.text = groceryItem
+        if(indexPath.section == 0){
+            let groceryItem = produce[indexPath.row]
+            cell.textLabel?.text = groceryItem
+        }
+        else if(indexPath.section == 1){
+            let groceryItem = meat[indexPath.row]
+            cell.textLabel?.text = groceryItem
+        }
+        else{
+            let groceryItem = other[indexPath.row]
+            cell.textLabel?.text = groceryItem
+        }
+        
+//        let groceryItem = groceries[indexPath.row]
+//        cell.textLabel?.text = groceryItem
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if(section == 0){
+            return "Produce"
+        }
+        if(section == 1){
+            return "Meat/Poultry"
+        }
+        else{
+            return "Others"
+        }
         
-        return "Grocery List"
+        //return "Grocery List"
     }
     
-    @IBAction func addItem(sender: UIButton){
-        groceries.append(addItemTextField.text!)
+    @IBAction func addMeat(sender: UIButton){
+        meat.append(addItemTextField.text!)
         addItemTextField.text = ""
         tableView.reloadData()
         
     }
     
+    @IBAction func addProduce(sender: UIButton){
+        produce.append(addItemTextField.text!)
+        addItemTextField.text = ""
+        tableView.reloadData()
+    }
+    
+    @IBAction func addOther(sender: UIButton){
+        other.append(addItemTextField.text!)
+        addItemTextField.text = ""
+        tableView.reloadData()
+        
+    }
+    
+    
+    
     //swipe to delete https://www.hackingwithswift.com/example-code/uikit/how-to-swipe-to-delete-uitableviewcells
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            groceries.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            if(indexPath.section == 0){
+                produce.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            else if(indexPath.section == 1){
+                meat.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            else {
+                other.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            
         }
     }
     
