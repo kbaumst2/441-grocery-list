@@ -46,6 +46,26 @@ class GroceriesTableViewController: UITableViewController {
         return "Section \(section)"
     }
     
+    //swipe to delete
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            groceries.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        }
+//    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCell.EditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCell.EditingStyle.delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            groceries.remove(at: indexPath.row)
+            
+        }
+    }
+    
     @IBAction func addItem(sender: UIButton){
         groceries.append(addItemTextField.text!)
     }

@@ -45,7 +45,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+        
+        return "Grocery List"
     }
     
     @IBAction func addItem(sender: UIButton){
@@ -54,6 +55,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
         
     }
+    
+    //swipe to delete https://www.hackingwithswift.com/example-code/uikit/how-to-swipe-to-delete-uitableviewcells
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            groceries.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+
     
 //    @IBAction func clearTextField(sender: UIButton){
 //        addItemTextField.
