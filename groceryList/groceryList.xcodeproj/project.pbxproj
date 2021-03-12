@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		443739D825F86F8B00CD8A88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443739D725F86F8B00CD8A88 /* ViewController.swift */; };
+		443739DD25F91D7700CD8A88 /* meat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 443739DC25F91D7600CD8A88 /* meat.jpeg */; };
 		447BD00A25F669B900AF55B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BD00925F669B900AF55B1 /* AppDelegate.swift */; };
 		447BD00C25F669B900AF55B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BD00B25F669B900AF55B1 /* SceneDelegate.swift */; };
 		447BD01125F669B900AF55B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447BD00F25F669B900AF55B1 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		443739D725F86F8B00CD8A88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		443739DC25F91D7600CD8A88 /* meat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meat.jpeg; sourceTree = "<group>"; };
 		447BD00625F669B900AF55B1 /* groceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = groceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		447BD00925F669B900AF55B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		447BD00B25F669B900AF55B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		447BD00825F669B900AF55B1 /* groceryList */ = {
 			isa = PBXGroup;
 			children = (
+				443739DC25F91D7600CD8A88 /* meat.jpeg */,
 				447BD00925F669B900AF55B1 /* AppDelegate.swift */,
 				447BD00B25F669B900AF55B1 /* SceneDelegate.swift */,
 				447BD00F25F669B900AF55B1 /* Main.storyboard */,
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443739DD25F91D7700CD8A88 /* meat.jpeg in Resources */,
 				447BD01625F669BC00AF55B1 /* LaunchScreen.storyboard in Resources */,
 				447BD01325F669BC00AF55B1 /* Assets.xcassets in Resources */,
 				447BD01125F669B900AF55B1 /* Main.storyboard in Resources */,

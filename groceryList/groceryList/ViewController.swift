@@ -16,10 +16,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var addOtherButton : UIButton!
 
 
-    var groceries = ["apples", "bananas", "broccoli", "Cheese"]
-    var produce = ["kale", "stawberry"]
-    var meat = ["chicken", "beef"]
-    var other = ["chips", "cheese"]
+//    var groceries = ["apples", "bananas", "broccoli", "Cheese"]
+//    var produce = ["kale", "stawberry"]
+//    var meat = ["chicken", "beef"]
+//    var other = ["chips", "cheese"]
+    var produce : [String] = []
+    var meat : [String] = []
+    var other : [String] =  []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +87,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //return "Grocery List"
     }
+    
+//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//        //var myImageView: UIImageView
+//        let frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 200)
+//        var myImageView = UIImageView(frame: frame)
+//        var myImage: UIImage = UIImage(named: "meat.jpeg")!
+//        myImageView.image = myImage
+//
+//        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+//        header.addSubview(myImageView)
+//        return header
+//    }
+    
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//      let header = view as! UITableViewHeaderFooterView
+//      header.textLabel?.textColor = UIColor.white
+//      let headerImage = UIImage(named: "meat.jpeg")
+//      let headerImageView = UIImageView(image: headerImage)
+//      header.backgroundView = headerImageView
+//  }
     
     @IBAction func addMeat(sender: UIButton){
         meat.append(addItemTextField.text!)
